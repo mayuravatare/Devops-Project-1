@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+install:
+runtime-versions:
+python: 3.x
+pre_build:
+commands:
+- echo Installing dependencies (if any)
+build:
+commands:
+- echo Building artifact
+- ls -la
+- zip -r deploy-artifact.zip *
+artifacts:
+files:
+- deploy-artifact.zip
+discard-paths: yes
